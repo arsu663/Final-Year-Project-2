@@ -1,0 +1,80 @@
+### Use this file to test out your REST call before implementing them in the code
+
+### Change the IP address below to your PC's IP address. Remain the port number 3000 unchanged
+@baseUrl = https://us-central1-final-year-project---final.cloudfunctions.net/api
+
+### Request 1 : Get a user whose correct 'login' and 'password'
+### Purpose   : To simulate the authentication process. 
+Get {{baseUrl}}/Appointments?docotorId=1
+
+### Request 3 : Create a new todo for a given user
+PUT {{baseUrl}}/users?id=2
+Content-Type: application/json
+
+{
+    
+    "login": "user3",
+    "password": "12345",
+  
+}
+### Request 4 : delte user
+GET {{baseUrl}}/recorded
+
+
+###
+GET {{baseUrl}}/doctors?name=dr.omar&&password=123
+###
+GET {{baseUrl}}/hospitals
+###
+GET {{baseUrl}}/doctors?DoctorlId=1
+###
+GET {{baseUrl}}/Appointments
+
+###
+
+POST {{baseUrl}}/doctors
+Content-Type: application/json
+
+{
+     
+            "hospitalId": 1,
+            "name": "ali",
+            "firstName": "ahmed",
+            "lastName": "moahmed",
+
+            "gender": "Male",
+            "email": "ali@gmail.com",
+            "password": "456",
+            "specialty": "specialty",
+            "imageURL": "assets/dr.jpg",
+            "imagePath": "assets/profile.jpg",
+            "prefix": "prefix",
+            "rank": 3.25,
+            "medicalEducation": "medicalEducation",
+            "residency": "residency",
+            "internship": "internship",
+            "fellowship": "fellowship",
+            "biography": "biography"
+}
+###
+
+Post {{baseUrl}}/Appointments
+Content-Type: application/json
+
+{
+   
+        "time": "",
+        "hospitalName": "",
+        "dcotorId": 2,
+        "userId": 1,
+}
+
+###
+GET   {{baseUrl}}/Appointments?DoctorId=1
+
+Content-Type: application/json
+
+{
+   
+        "name":"dr.abdalla"
+}

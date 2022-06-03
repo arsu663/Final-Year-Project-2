@@ -1,0 +1,136 @@
+### Use this file to test out your REST call before implementing them in the code
+
+# Local JSON-Server
+### Change the IP address below to your PC's IP address. Remain the port number 3000 unchanged
+# @baseUrl = http://192.168.0.5:3000
+
+# Local Firebase Emulator 
+#@baseUrl = http://192.168.100.40:5001/patientaid-206bb/us-central1/api
+# @baseUrl = https://us-central1-patientaid-206bb.cloudfunctions.net/api
+@baseUrl = https://us-central1-final-year-project---final.cloudfunctions.net/api
+
+# Live Firebase
+# @baseUrl = https://us-central1-mvvm-frontend-and-mvc-backend.cloudfunctions.net/api
+
+### Request 1 : Get a user whose correct 'login' and 'password'
+### Purpose   : To simulate the authentication process. 
+GET {{baseUrl}}/users?login=omar@gmail.com&password=123456789
+
+### Request 2 : Get the counter data  for a given user
+GET {{baseUrl}}/doctors
+
+### Request 3 : Update the information of a given counter
+PUT {{baseUrl}}/users/ewons54sm68mr31byaNd
+Content-Type: application/json
+
+{
+    "name": "omar Eltablawy",
+    "id": "user4"
+}
+
+### Request: Get all users
+GET {{baseUrl}}/Appointments?doctorId=5tULIiM5MSay80Qyw7IPeA6PzXg2
+
+### Request: Add a new user
+POST {{baseUrl}}/users
+Content-Type: application/json
+
+{
+    "id": "sraA5jPYPxfoRW6lkYuCDjsVhPI3",
+    "name": "omar",
+    "login": "",
+    "email": "omar@gmail.com",
+    "phoneNumber": "0156456",
+    "photoUrl": "assets/mathew.png",
+    "appointment": null,
+    "hasAppointment": false
+}
+
+
+### Request: Delete a user
+POST {{baseUrl}}/Appointments
+Content-Type: application/json
+
+{
+    "name": "omar",
+    "approve": true,
+    "disapprove": true,
+    "hospitalName": "KPJ",
+    "docotorId": 2,
+    "userId": 26,
+    "day": "2021-07-05 13:30:00.000Z",
+    "isSelected": true
+}
+
+### Request: Delete a user
+POST {{baseUrl}}/hospitals
+Content-Type: application/json
+
+{
+    "name": "Mohmand Hospital",
+    "description": "Kandahar Hospital",
+}
+
+### Request: Delete a user
+PATCH {{baseUrl}}/doctors/12
+Content-Type: application/json
+
+{
+    "gender": "Female"
+}
+
+### Request: Delete a user
+GET {{baseUrl}}/hospitals
+
+
+### Request: Delete a user
+GET {{baseUrl}}/users?id=81C3QFA7wIYFjFrufQUuMHR7fus1
+
+### Request: Delete a user
+GET {{baseUrl}}/doctors/
+
+### Request: Delete a user
+DELETE {{baseUrl}}/users/ewons54sm68mr31byaNd
+
+###
+
+POST {{baseUrl}}/doctors
+Content-Type: application/json
+
+{
+     
+            "hospitalId": 1,
+            "name": "Adnan Mujaddadi",
+            "firstName": "Adnan",
+            "lastName": "Mujaddadi",
+            "gender": "Male",
+            "email": "adnan@gmail.com",
+            "password": "test1234",
+            "specialty": "Surgeon",
+            "imageURL": "https://scontent.fmkz1-1.fna.fbcdn.net/v/t1.6435-9/82109253_2533124650343088_5648431698514280448_n.jpg?_nc_cat=103&ccb=1-7&_nc_sid=174925&_nc_ohc=z8_VsOz87xsAX9fB80O&tn=Xn8hMEx2rsW6reS0&_nc_ht=scontent.fmkz1-1.fna&oh=00_AT87wp0IVsSd7Oek4fW_do8rh5EEV_Ldf7YJKU3JdqoQ1A&oe=62BA0368",
+            "imagePath": "https://scontent.fmkz1-1.fna.fbcdn.net/v/t1.6435-9/82109253_2533124650343088_5648431698514280448_n.jpg?_nc_cat=103&ccb=1-7&_nc_sid=174925&_nc_ohc=z8_VsOz87xsAX9fB80O&tn=Xn8hMEx2rsW6reS0&_nc_ht=scontent.fmkz1-1.fna&oh=00_AT87wp0IVsSd7Oek4fW_do8rh5EEV_Ldf7YJKU3JdqoQ1A&oe=62BA0368",
+            "prefix": "prefix",
+            "rank": 3.25,
+            "medicalEducation": "MBA",
+            "residency": "Kandahar",
+            "internship": "Already done",
+            "fellowship": "fellowship",
+            "biography": "Not ready yet"
+}
+
+
+###
+
+POST {{baseUrl}}/hospitals
+Content-Type: application/json
+
+{   
+            "hospitalId": 1,
+            "hospitalName": "haha Hospital",
+            "description": "No need",
+            "imageURL": "",
+            "location": "Kandahar",
+            "latitude": "",
+            "longitude": ""
+}
+

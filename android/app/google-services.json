@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "88601025383",
+    "project_id": "final-year-project---final",
+    "storage_bucket": "final-year-project---final.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:88601025383:android:52c609eafd4d206e292dc2",
+        "android_client_info": {
+          "package_name": "com.example.patientaid"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "88601025383-lokqvolgvduie2kq7bk2libq95668pfi.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDQdJWEdmLCxkI1R65jH5tSyBazjSA52Fg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "88601025383-lokqvolgvduie2kq7bk2libq95668pfi.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
