@@ -99,12 +99,12 @@ Content-Type: application/json
 
 {
      
-            "hospitalId": "k22nYuBumtOdO4pwGKZO",
-            "name": "Dr. Nasir",
-            "firstName": "Nasir",
-            "lastName": "Mujaddadi",
+            "hospitalId": "cDC6hwkUkM6aWlb14Mjf",
+            "name": "Sha Wali",
+            "firstName": "Shah",
+            "lastName": "Wali",
             "gender": "Male",
-            "email": "nasir@gmail.com",
+            "email": "shah@gmail.com",
             "password": "1234567",
             "specialty": "Surgeon",
             "imageURL": "assets/albert.png",
