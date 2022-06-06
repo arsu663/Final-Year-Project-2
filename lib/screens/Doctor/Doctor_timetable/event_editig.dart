@@ -5,7 +5,6 @@ import 'package:patientaid/providers/event_provider.dart';
 import 'package:patientaid/screens/Doctor/Doctor_timetable/utils.dart';
 import 'package:provider/provider.dart';
 import '../../../Model/event.dart';
-import 'package:intl/intl.dart';
 
 class EventEditing extends StatefulWidget {
   final Event event;

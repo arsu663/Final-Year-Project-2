@@ -1,7 +1,5 @@
-import 'package:flutter/material.dart';
 import 'package:patientaid/screens/User%20Profile/edit_profile_screen.dart';
 
-import '../../Model/Doctor.dart';
 import '../../app/main_dependencies.dart';
 
 import '../Doctor/Doctor Profile/widgets.dart';

@@ -1,11 +1,8 @@
-import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
 import 'package:patientaid/Model/Appointment.dart';
 import 'package:patientaid/app/main_dependencies.dart';
-import 'package:patientaid/helpers/hex_code.dart';
 import 'package:patientaid/screens/Patient/PatientAppointment/PickAppointment_viewMoel.dart';
 
-import 'PickAppointment_viewMoel.dart';
 
 class Body extends StatefulWidget {
   // const Body({Key key}) : super(key: key);

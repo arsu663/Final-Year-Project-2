@@ -1,7 +1,7 @@
+import 'package:flutter/services.dart';
 import 'package:patientaid/screens/Hospital/HospitalList/hospital_viewmodel.dart';
 
 import '../../../app/main_dependencies.dart';
-import 'package:flutter/material.dart';
 
 import 'hospital_viewmodel.dart';
 
@@ -36,7 +36,7 @@ class _HospitaldashboardState extends State<Hospitaldashboard> {
             dependency<HospitalListViewmodel>().hospital,
         selector: (_, doctorViewmodel) =>
             doctorViewmodel.busy ? 0 : doctorViewmodel.doctors.length,
-            // doctorViewmodel.busy ? 0 : doctorViewmodel.doctors,
+        // doctorViewmodel.busy ? 0 : doctorViewmodel.doctors,
         builder: (context, doctorViewmodel, ___) {
           final doctors = doctorViewmodel.doctors;
 
@@ -80,15 +80,15 @@ class _HospitaldashboardState extends State<Hospitaldashboard> {
       title: Text("Doctors"),
       backgroundColor: Colors.brown[400],
       elevation: 0,
-      brightness: Brightness.light,
       iconTheme: IconThemeData(color: Colors.white),
-      leading: IconButton(
-        icon: Icon(
-          Icons.menu,
-          size: 14,
-        ),
-        onPressed: () {},
-      ),
+      // leading: IconButton(
+      //   icon: Icon(
+      //     Icons.menu,
+      //     size: 14,
+      //   ),
+      //   onPressed: () {},
+      // ),
+      systemOverlayStyle: SystemUiOverlayStyle.dark,
       // actions: [
       //   IconButton(
       //     icon: Icon(
@@ -104,11 +104,11 @@ class _HospitaldashboardState extends State<Hospitaldashboard> {
   /// Highlighted Doctors Section
   SizedBox _hDoctorsSection(final doctors, HDashboardViewmodel viewmodel) {
     return SizedBox(
-      height: 199,
+      height: 599,
       child: ListView.separated(
         primary: false,
         shrinkWrap: true,
-        scrollDirection: Axis.horizontal,
+        scrollDirection: Axis.vertical,
         padding: EdgeInsets.symmetric(horizontal: 24),
         itemCount: doctors.length,
         separatorBuilder: (BuildContext context, int index) =>
@@ -117,8 +117,12 @@ class _HospitaldashboardState extends State<Hospitaldashboard> {
           doctor: doctors[index],
           onTap: () {
             viewmodel.selectDr(index);
-            Navigator.push(context,
-                MaterialPageRoute(builder: (context) => DoctorProfile()));
+            Navigator.push(
+              context,
+              MaterialPageRoute(
+                builder: (context) => DoctorProfile(),
+              ),
+            );
           },
         ),
       ),

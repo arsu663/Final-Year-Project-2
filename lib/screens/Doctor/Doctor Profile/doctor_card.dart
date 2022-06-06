@@ -1,9 +1,7 @@
-import 'package:flutter/material.dart';
 import 'package:flutter_datetime_picker/flutter_datetime_picker.dart';
 import 'package:intl/intl.dart';
 import 'package:mailer/smtp_server/gmail.dart';
 import 'package:patientaid/Model/Appointment.dart';
-import 'package:patientaid/Model/Doctor.dart';
 import 'package:patientaid/app/main_dependencies.dart';
 import 'package:patientaid/screens/Hospital/HospitalList/hospital_viewmodel.dart';
 
@@ -82,7 +80,7 @@ class _DoctorCardState extends State<DoctorCard> {
                               child: CircleAvatar(
                                 radius: 70,
                                 backgroundImage:
-                                    NetworkImage(widget.doctorInfo.imagePath),
+                                    AssetImage(widget.doctorInfo.imagePath),
                               ),
                             ),
                           ],

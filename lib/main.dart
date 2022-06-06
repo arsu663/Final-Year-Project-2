@@ -1,10 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:google_sign_in/google_sign_in.dart';
 import 'package:patientaid/app/main_dependencies.dart';
 import 'package:patientaid/providers/event_provider.dart';
-import 'package:patientaid/services/auth/google_firebase.dart';
 // import 'package:patientaid/user_notifier.dart';
 import 'package:provider/provider.dart';
 import 'app/dependencies.dart' as di;
@@ -26,7 +24,6 @@ class MyApp extends StatelessWidget {
       child: MaterialApp(
         theme: ThemeData(
           primaryColor: Colors.brown[500],
-          accentColor: Colors.pink[300],
           canvasColor: Colors.brown[400],
           primaryIconTheme: IconThemeData(
             color: Colors.black,
@@ -41,7 +38,7 @@ class MyApp extends StatelessWidget {
                 ),
                 headline5:
                     TextStyle(fontSize: 22, fontFamily: 'RobotoCondensed'),
-              ),
+              ), colorScheme: ColorScheme.fromSwatch().copyWith(secondary: Colors.pink[300]),
         ),
 
         //onGenerateRoute:RouteGenerator.generateRoute,

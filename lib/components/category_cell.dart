@@ -1,6 +1,5 @@
 
 import '../app/main_dependencies.dart';
-import 'package:flutter/material.dart';
 
 class CategoryCell extends StatelessWidget {
   final Category2 category;

@@ -58,7 +58,7 @@ POST {{baseUrl}}/auths/signup
 Content-Type: application/json
 
 {
-    "email": "mora@gmail.com",
+    "email": "arsalan@gmail.com",
     "password": "123456"
 }
 
@@ -67,7 +67,7 @@ POST {{baseUrl}}/auths/signin
 Content-Type: application/json
 
 {
-    "email": "omar@gmail.com",
+    "email": "arsalan@gmail.com",
     "password": "123456"
 }
 

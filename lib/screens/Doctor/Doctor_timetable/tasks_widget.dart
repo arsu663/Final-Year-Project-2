@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:patientaid/Model/mock_data.dart';
-import 'package:patientaid/helpers/hex_code.dart';
 import 'package:patientaid/providers/event_provider.dart';
 import 'package:patientaid/screens/Doctor/Doctor_timetable/event_data_source.dart';
 import 'package:provider/provider.dart';

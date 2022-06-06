@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 
-import 'Doctor.dart';
 
 class Appointment {
   dynamic id;
@@ -24,8 +23,8 @@ class Appointment {
       this.hospitalName = "",
       this.doctorid,
       this.userId,
-      this.day = null,
-      this.date = null,
+      this.day,
+      this.date,
       this.isSelected = false,
       this.isDone = false});
 // Appointment.copy(Appointment from ):this(from.time , from.hospitalName,Doctor.copy(from.doctor) );

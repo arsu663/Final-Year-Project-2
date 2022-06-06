@@ -1,11 +1,7 @@
-import 'package:flutter/cupertino.dart';
-import 'package:flutter/material.dart';
 import 'package:patientaid/screens/User%20Profile/edit_profile_screen.dart';
-import '../screens/Doctor/Doctor%20Profile/doctor_profile.dart';
 // import '../../screens/User%20Profile/edit_profile_screen.dart';
 // import '../../screens/User%20Profile/profile_screen.dart';
 
-import '../Model/mock_list_doctors.dart';
 import 'main_dependencies.dart';
 
 Route<dynamic> createRoute(RouteSettings settings) {

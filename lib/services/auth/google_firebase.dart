@@ -1,4 +1,3 @@
-import 'package:firebase_auth/firebase_auth.dart' as fire;
 import 'package:firebase_auth/firebase_auth.dart';
 
 import 'package:google_sign_in/google_sign_in.dart';
@@ -17,7 +16,7 @@ class GoogleAuth implements LoginByGoogle {
     try {
       final googleUser = await googleSignIn.signIn();
 
-      if (googleUser == null);
+      if (googleUser == null) {}
 
       _user = googleUser as u.User;
 

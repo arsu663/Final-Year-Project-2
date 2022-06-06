@@ -1,9 +1,7 @@
 import 'package:google_fonts/google_fonts.dart';
 import 'package:patientaid/screens/Hospital/HospitalList/hospital_viewmodel.dart';
-import 'package:patientaid/services/hospitals/hospital_service_rest.dart';
 
 import '../../../app/main_dependencies.dart';
-import 'package:flutter/material.dart';
 
 class HospitalListViewScreen extends StatefulWidget {
   List<Hospital> hospital;

@@ -1,7 +1,6 @@
 import 'package:patientaid/Model/Parient.dart';
 import 'package:patientaid/app/main_dependencies.dart';
 
-import '../../Model/user.dart';
 
 abstract class AuthService {
   Future<AbstractUser> authenticateUser({String login, String password});

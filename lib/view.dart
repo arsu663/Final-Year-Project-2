@@ -1,7 +1,4 @@
-import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import 'app/dependencies.dart';
-import 'viewmodel.dart';
 import './app/main_dependencies.dart';
 
 //----------------------------------------------------------------------------

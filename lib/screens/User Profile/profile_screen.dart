@@ -1,6 +1,4 @@
-import 'package:flutter/material.dart';
 import '../../app/main_dependencies.dart';
-import '../Doctor/Doctor Profile/widgets.dart';
 import 'profile_card.dart';
 
 class ProfileScreen extends StatefulWidget {

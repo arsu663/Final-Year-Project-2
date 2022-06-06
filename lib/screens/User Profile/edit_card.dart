@@ -1,6 +1,4 @@
-import 'package:flutter/material.dart';
 
-import '../../Model/Doctor.dart';
 import '../../app/main_dependencies.dart';
 import '../Doctor/Doctor Profile/widgets.dart';
 

@@ -1,6 +1,5 @@
 
 import '../app/main_dependencies.dart';
-import 'package:flutter/material.dart';
 
 class TrdCell extends StatelessWidget {
   final Doctor doctor;

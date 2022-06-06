@@ -1,4 +1,3 @@
-import 'package:flutter/material.dart';
 import '../app/main_dependencies.dart';
 
 import 'dart:ui' as ui;

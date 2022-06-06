@@ -1,7 +1,4 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:patientaid/Model/Doctor.dart';
-import 'package:patientaid/Model/mock_list_doctors.dart';
 import 'package:patientaid/app/dependencies.dart';
 import 'package:patientaid/screens/Hospital/HospitalDash/hospital_viewmodel.dart';
 

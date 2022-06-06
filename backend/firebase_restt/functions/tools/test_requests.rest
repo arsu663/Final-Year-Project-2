@@ -29,14 +29,14 @@ Content-Type: application/json
 }
 
 ### Request: Get all users
-GET {{baseUrl}}/Appointments?doctorId=5tULIiM5MSay80Qyw7IPeA6PzXg2
+GET {{baseUrl}}/hospitals
 
 ### Request: Add a new user
 POST {{baseUrl}}/users
 Content-Type: application/json
 
 {
-    "id": "sraA5jPYPxfoRW6lkYuCDjsVhPI3",
+    
     "name": "omar",
     "login": "",
     "email": "omar@gmail.com",
@@ -80,7 +80,7 @@ Content-Type: application/json
 }
 
 ### Request: Delete a user
-GET {{baseUrl}}/hospitals
+GET {{baseUrl}}/users/zFCdaJwClvsEOANAisOy
 
 
 ### Request: Delete a user
@@ -99,16 +99,16 @@ Content-Type: application/json
 
 {
      
-            "hospitalId": 1,
-            "name": "Adnan Mujaddadi",
-            "firstName": "Adnan",
+            "hospitalId": "k22nYuBumtOdO4pwGKZO",
+            "name": "Dr. Nasir",
+            "firstName": "Nasir",
             "lastName": "Mujaddadi",
             "gender": "Male",
-            "email": "adnan@gmail.com",
-            "password": "test1234",
+            "email": "nasir@gmail.com",
+            "password": "1234567",
             "specialty": "Surgeon",
-            "imageURL": "https://scontent.fmkz1-1.fna.fbcdn.net/v/t1.6435-9/82109253_2533124650343088_5648431698514280448_n.jpg?_nc_cat=103&ccb=1-7&_nc_sid=174925&_nc_ohc=z8_VsOz87xsAX9fB80O&tn=Xn8hMEx2rsW6reS0&_nc_ht=scontent.fmkz1-1.fna&oh=00_AT87wp0IVsSd7Oek4fW_do8rh5EEV_Ldf7YJKU3JdqoQ1A&oe=62BA0368",
-            "imagePath": "https://scontent.fmkz1-1.fna.fbcdn.net/v/t1.6435-9/82109253_2533124650343088_5648431698514280448_n.jpg?_nc_cat=103&ccb=1-7&_nc_sid=174925&_nc_ohc=z8_VsOz87xsAX9fB80O&tn=Xn8hMEx2rsW6reS0&_nc_ht=scontent.fmkz1-1.fna&oh=00_AT87wp0IVsSd7Oek4fW_do8rh5EEV_Ldf7YJKU3JdqoQ1A&oe=62BA0368",
+            "imageURL": "assets/albert.png",
+            "imagePath": "assets/albert.png",
             "prefix": "prefix",
             "rank": 3.25,
             "medicalEducation": "MBA",
@@ -125,12 +125,12 @@ POST {{baseUrl}}/hospitals
 Content-Type: application/json
 
 {   
-            "hospitalId": 1,
-            "hospitalName": "haha Hospital",
-            "description": "No need",
-            "imageURL": "",
-            "location": "Kandahar",
             "latitude": "",
-            "longitude": ""
+            "hospitalName": "Mujaddadi Hospital 2",
+            "description": "Good Hospital 1",
+            "hospitalId": 3,
+            "location": "Kandahar",
+            "longitude": "",
+            "imageURL": ""
 }
 

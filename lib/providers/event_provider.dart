@@ -2,7 +2,6 @@ import '../Model/Appointment.dart';
 import '../app/main_dependencies.dart';
 import '../screens/Patient/PatientAppointment/PickAppointment_viewMoel.dart';
 import '../Model/event.dart';
-import '../screens/Doctor/Doctor_timetable/utils.dart';
 
 class EventProvider extends ChangeNotifier {
   //storing the state, in our case its the list of the events

@@ -1,8 +1,6 @@
-import 'package:flutter/material.dart';
 import 'package:mdi/mdi.dart';
 import 'dart:core';
 import 'package:firebase_auth/firebase_auth.dart';
-import 'package:provider/provider.dart';
 
 import '../app/main_dependencies.dart';
 

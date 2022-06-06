@@ -1,8 +1,6 @@
-import 'package:flutter/material.dart';
 import '../../app/main_dependencies.dart';
 import '../Doctor/Doctor Profile/widgets.dart';
 import 'edit_card.dart';
-import 'profile_card.dart';
 
 class EditProfileScreen extends StatefulWidget {
    User user ;

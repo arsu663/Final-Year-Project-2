@@ -1,5 +1,3 @@
-import 'package:flutter/foundation.dart';
-import 'package:patientaid/app/main_dependencies.dart';
 
 class Hospital {
   dynamic _id;

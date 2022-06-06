@@ -1,5 +1,4 @@
 import '../app/main_dependencies.dart';
-import 'package:flutter/material.dart';
 
 class DetailCell extends StatelessWidget {
   final String title;

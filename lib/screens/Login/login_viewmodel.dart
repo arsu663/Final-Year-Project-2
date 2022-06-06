@@ -4,7 +4,10 @@ import 'package:patientaid/services/doctor/doctor_servcie.dart';
 import '../../app/main_dependencies.dart';
 
 class LoginViewmodel extends Viewmodel {
-  get _service => dependency<AuthService>();
+  // get _service => dependency<AuthService>();
+  AuthService get _service => dependency<AuthService>();
+    // AuthService get _service => dependency();
+
   User _user = User();
   bool _showPassword = false;
   bool _showErrorMessage = false;
@@ -57,6 +60,7 @@ class LoginViewmodel extends Viewmodel {
   //   print(username + password);
 
   //   _user = await _service.authenticateUser(login: _email, password: _password);
+ 
 
   //   if (_user == null) {
   //     _dr =
@@ -90,7 +94,7 @@ class LoginViewmodel extends Viewmodel {
     turnBusy();
 
     final u = await _service.updateUser(user2);
-    _user = u;
+    // _user = u;
     turnIdle();
     return _user;
   }

@@ -1,7 +1,6 @@
 import 'package:patientaid/Model/Appointment.dart';
 import 'package:patientaid/app/main_dependencies.dart';
 import 'package:patientaid/services/appointments/appointment_service.dart';
-import 'package:patientaid/services/appointments/appointment_service_rest.dart';
 
 class AppointmentViewmdeol extends Viewmodel {
   AppointmentService get service => dependency();

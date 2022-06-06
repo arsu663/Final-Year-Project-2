@@ -1,10 +1,8 @@
 import 'package:patientaid/Model/Appointment.dart';
-import 'package:patientaid/Model/Parient.dart';
 import 'package:patientaid/screens/Hospital/HospitalList/hospital_viewmodel.dart';
 import '../../../Model/mock_data.dart';
 import '../../../app/main_dependencies.dart';
 import 'package:intl/intl.dart';
-import 'package:flutter_datetime_picker/flutter_datetime_picker.dart';
 
 import 'doctor_viewmodel.dart';
 
@@ -1168,7 +1166,7 @@ class ProfilePicture extends StatelessWidget {
                 ),
                 transform: Matrix4.translationValues(0.0, -15.0, 0.0),
                 child: CircleAvatar(
-                    radius: 70, backgroundImage: NetworkImage(imagePath)),
+                    radius: 70, backgroundImage: AssetImage(imagePath)),
               ),
             ],
           ),

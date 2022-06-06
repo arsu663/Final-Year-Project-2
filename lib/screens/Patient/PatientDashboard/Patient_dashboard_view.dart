@@ -1,8 +1,4 @@
-import 'package:firebase_auth/firebase_auth.dart';
-import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import 'package:mdi/mdi.dart';
-import 'package:patientaid/components/bottomNavbar.dart';
 import '../../../app/main_dependencies.dart';
 
 class PatientDashboardScreen extends StatefulWidget {
@@ -89,7 +85,7 @@ class _PatientDashboardScreen extends State<PatientDashboardScreen> {
                     child: CircleAvatar(
                       backgroundImage:
                           // user.photoURL !=null ?
-                          NetworkImage(user.photo),
+                          AssetImage(user.photo),
                       //  CircleAvatar(),
 
                       radius: 25,

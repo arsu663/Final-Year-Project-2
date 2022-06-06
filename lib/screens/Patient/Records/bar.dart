@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:patientaid/helpers/hex_code.dart';
 import '../../../app/main_dependencies.dart';
 
 class Bar extends StatelessWidget implements PreferredSizeWidget {

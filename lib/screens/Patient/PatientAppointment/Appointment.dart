@@ -1,9 +1,6 @@
-import 'package:flutter/material.dart';
-import 'package:patientaid/Model/Appointment.dart';
 import 'package:patientaid/app/main_dependencies.dart';
 import 'package:patientaid/screens/Patient/PatientAppointment/null_appointments.dart';
 
-import '../../../view.dart';
 import 'Body.dart';
 import 'PickAppointment_viewMoel.dart';
 import 'bar.dart';

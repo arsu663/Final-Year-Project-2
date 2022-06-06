@@ -109,7 +109,7 @@ class HDCell extends StatelessWidget {
                   child: Image(
                     fit: BoxFit.cover,
                     filterQuality: FilterQuality.none,
-                    image: NetworkImage(doctor.imageURL),
+                    image: AssetImage(doctor.imageURL),
                   ),
                 ),
               ),

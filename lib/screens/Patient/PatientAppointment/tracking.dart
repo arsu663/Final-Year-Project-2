@@ -1,4 +1,3 @@
-import 'package:flutter/material.dart';
 import '../../../app/main_dependencies.dart';
 import 'package:google_fonts/google_fonts.dart';
 

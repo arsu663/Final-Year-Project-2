@@ -1,8 +1,6 @@
-import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:mdi/mdi.dart';
 import '../../../app/main_dependencies.dart';
-import 'doctor_dashboard_viewmodel.dart';
 
 class DoctorDashboardScreen extends StatefulWidget {
   Doctor _doctor;

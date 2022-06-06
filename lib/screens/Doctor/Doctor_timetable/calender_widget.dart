@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:patientaid/app/dependencies.dart';
 import 'package:patientaid/helpers/hex_code.dart';
 import 'package:patientaid/providers/event_provider.dart';
 import 'package:patientaid/screens/Doctor/Doctor_timetable/event_data_source.dart';

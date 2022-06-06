@@ -2,9 +2,7 @@ import 'dart:math';
 
 import 'package:patientaid/Model/Parient.dart';
 
-import '../../app/dependencies.dart';
 import '../../app/main_dependencies.dart';
-import '../rest.dart';
 
 class UserAuthServiceFirebase implements AuthService {
   RestService get rest => dependency();

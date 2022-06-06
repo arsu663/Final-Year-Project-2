@@ -9,8 +9,8 @@ class Event {
 
   Event({
     this.title="",
-    this.from=null,
-    this.to =null,
+    this.from,
+    this.to,
     this.backgroundColor = Colors.lightGreen,
   });
 }
