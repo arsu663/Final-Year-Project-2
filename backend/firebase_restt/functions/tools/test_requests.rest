@@ -40,6 +40,7 @@ Content-Type: application/json
     "name": "omar",
     "login": "",
     "email": "omar@gmail.com",
+    "password": "123456",
     "phoneNumber": "0156456",
     "photoUrl": "assets/mathew.png",
     "appointment": null,
