@@ -1,4 +1,3 @@
-
 import '../../app/main_dependencies.dart';
 import '../Doctor/Doctor Profile/widgets.dart';
 
@@ -74,7 +73,9 @@ class _EditProfileCardState extends State<EditProfileCard> {
                     ),
                     (widget.user != null)
                         ? ProfilePicture(imagePath: widget.user.photo)
-                        : ProfilePicture(imagePath: widget.dr.imagePath),
+                        : (widget.dr != null)
+                            ? ProfilePicture(imagePath: widget.dr.imagePath)
+                            : Text(' '),
                     Column(
                       children: [
                         MaterialButton(
@@ -82,7 +83,9 @@ class _EditProfileCardState extends State<EditProfileCard> {
                             setState(() {
                               (widget.user != null)
                                   ? Navigator.pop(context, widget.user)
-                                  : Navigator.pop(context, widget.dr);
+                                  : (widget.dr != null)
+                                      ? Navigator.pop(context, widget.dr)
+                                      : Text('');
                             });
                           },
                           color: Theme.of(context).primaryColor,
@@ -113,8 +116,10 @@ class _EditProfileCardState extends State<EditProfileCard> {
               ),
               (widget.user != null)
                   ? UserInfo(name: widget.user.name, specialty: "")
-                  : UserInfo(
-                      name: widget.dr.name, specialty: widget.dr.specialty),
+                  : (widget.dr != null)
+                      ? UserInfo(
+                          name: widget.dr.name, specialty: widget.dr.specialty)
+                      : Text(''),
               (widget.user == null)
                   ? EditBiographySection(doctor: widget.dr)
                   : Container(),

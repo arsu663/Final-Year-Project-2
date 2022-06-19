@@ -1,5 +1,6 @@
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:mdi/mdi.dart';
+import 'package:patientaid/screens/Doctor/DoctorDashboard/Doctor_Availblity/doctoravailability_view.dart';
 import '../../../app/main_dependencies.dart';
 
 class DoctorDashboardScreen extends StatefulWidget {
@@ -25,9 +26,9 @@ List<DoctorDashCategory> listCategory = [
     color: HexColor("#2A2AC0"),
   ),
   DoctorDashCategory(
-    icon: Icons.forum,
-    subTitle: "Timetable",
-    title: "Edit TimeTable",
+    icon: Icons.event_available_sharp,
+    subTitle: "Availability",
+    title: "Update Availability",
     color: HexColor("#2A2AC0"),
   ),
   DoctorDashCategory(
@@ -105,37 +106,39 @@ class _DoctorDashboardScreen extends State<DoctorDashboardScreen> {
                       ),
                     ),
                   ),
-                  body: Container(
-                    child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: <Widget>[
-                        SafeArea(
-                          child: Container(
-                            margin: EdgeInsets.all(5),
-                            padding: EdgeInsets.symmetric(
-                                horizontal: 25, vertical: 5),
-                            decoration: BoxDecoration(
-                              borderRadius: BorderRadius.circular(25),
-                              border: Border.all(
-                                color: Colors.blue,
-                              ),
-                            ),
-                            child: TextField(
-                              decoration: InputDecoration(
-                                border: InputBorder.none,
-                                icon: Icon(Icons.search),
-                                hintText: "Search here",
-                                hintStyle: TextStyle(color: Colors.blue),
-                              ),
-                            ),
+                  body: SingleChildScrollView(
+                    child: Container(
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: <Widget>[
+                          // SafeArea(
+                          //   child: Container(
+                          //     margin: EdgeInsets.all(5),
+                          //     padding: EdgeInsets.symmetric(
+                          //         horizontal: 25, vertical: 5),
+                          //     decoration: BoxDecoration(
+                          //       borderRadius: BorderRadius.circular(25),
+                          //       border: Border.all(
+                          //         color: Colors.blue,
+                          //       ),
+                          //     ),
+                          //     child: TextField(
+                          //       decoration: InputDecoration(
+                          //         border: InputBorder.none,
+                          //         icon: Icon(Icons.search),
+                          //         hintText: "Search here",
+                          //         hintStyle: TextStyle(color: Colors.blue),
+                          //       ),
+                          //     ),
+                          //   ),
+                          // ),
+                          Container(
+                            height: 550,
+                            width: _width,
+                            child: buildGridView(context),
                           ),
-                        ),
-                        Container(
-                          height: 550,
-                          width: _width,
-                          child: buildGridView(context),
-                        ),
-                      ],
+                        ],
+                      ),
                     ),
                   )));
         },
@@ -157,9 +160,9 @@ class _DoctorDashboardScreen extends State<DoctorDashboardScreen> {
         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
-          _buildNavBarItem("HOME", Mdi.home, 0),
-          _buildNavBarItem("BROWSE", Icons.search, 1),
-          _buildNavBarItem("NEARBY", Mdi.mapSearch, 2),
+          _buildNavBarItem("Contact Us", Mdi.home, 0),
+          // _buildNavBarItem("About Us", Icons.contact_page, 1),
+          // _buildNavBarItem("NEARBY", Mdi.mapSearch, 2),
         ],
       ),
     );
@@ -186,8 +189,7 @@ class _DoctorDashboardScreen extends State<DoctorDashboardScreen> {
             ),
             DoctorDashCategory(
               onPressed: () {
-                Navigator.push(context,
-                    MaterialPageRoute(builder: (context) => DoctorCalender()));
+                Navigator.pushNamed(context, DoctorAvailability.routeName);
               },
               title: listCategory[2].title,
               subTitle: listCategory[2].subTitle,

@@ -68,7 +68,7 @@ class _TrackingscreenState extends State<Trackingscreen> {
                         ),
                       ),
                     ),
-                    // _buildStepper(),
+                    _buildStepper(),
                     Spacer(),
                     Align(
                       alignment: Alignment.centerLeft,
@@ -135,7 +135,7 @@ class _TrackingscreenState extends State<Trackingscreen> {
         //     {VoidCallback onStepContinue, VoidCallback onStepCancel}) {
         //   return Container();
         // },
-        controlsBuilder: (BuildContext context, ControlsDetails controls  ) {
+        controlsBuilder: (BuildContext context, ControlsDetails controls) {
           return Container();
         },
         steps: [
@@ -196,7 +196,7 @@ class _TrackingscreenState extends State<Trackingscreen> {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Text(
-            "STEP ${index + 1}",
+            "STEP ${(index <= 0) ? index + 1 : index}",
             style: Theme.of(context).textTheme.overline,
           ),
           SizedBox(height: 1),
@@ -224,11 +224,13 @@ class _TrackingscreenState extends State<Trackingscreen> {
                   widget.vewimdeol.appointments[widget.index].approve == true)),
       state: (index == 0 ||
               index == 1 ||
-              (index == 2 &&
-                  widget.vewimdeol.appointments[widget.index].disapprove ==
-                      true &&
-                  widget.vewimdeol.appointments[widget.index].approve ==
-                      false) ||
+              (index == 2
+              // &&
+              //     widget.vewimdeol.appointments[widget.index].disapprove ==
+              //         true &&
+              //     widget.vewimdeol.appointments[widget.index].approve ==
+              //         false
+              ) ||
               (index == 3 &&
                   widget.vewimdeol.appointments[widget.index].disapprove ==
                       true &&

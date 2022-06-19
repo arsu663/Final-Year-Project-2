@@ -6,7 +6,7 @@ import '../../app/main_dependencies.dart';
 class LoginViewmodel extends Viewmodel {
   // get _service => dependency<AuthService>();
   AuthService get _service => dependency<AuthService>();
-    // AuthService get _service => dependency();
+  // AuthService get _service => dependency();
 
   User _user = User();
   bool _showPassword = false;
@@ -60,7 +60,6 @@ class LoginViewmodel extends Viewmodel {
   //   print(username + password);
 
   //   _user = await _service.authenticateUser(login: _email, password: _password);
- 
 
   //   if (_user == null) {
   //     _dr =
@@ -81,11 +80,14 @@ class LoginViewmodel extends Viewmodel {
   }
 
   Future<AbstractUser> checkType() async {
+    // print(_email);
+    // print(_password);
     turnBusy();
     final AbstractUser _doctor =
-        await _service.authenticateDctor(login: _email, password: _password);
+        await _service.authenticateDoctor(login: _email, password: _password);
+    // print(_doctor);
     // if (_doctor == null) _showErrorMessage = true;
-    user = null;
+    // user = null;
     turnIdle();
     return _doctor;
   }
@@ -94,7 +96,7 @@ class LoginViewmodel extends Viewmodel {
     turnBusy();
 
     final u = await _service.updateUser(user2);
-    // _user = u;
+    _user = u;
     turnIdle();
     return _user;
   }

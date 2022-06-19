@@ -9,6 +9,16 @@ class RestService {
   // Send a GET request to retrieve data from a REST server
   Future get(String endpoint) async {
     final response = await http.get(Uri.parse('$_baseUrl/$endpoint'));
+    
+
+    if (response.statusCode == 200) {
+      return jsonDecode(response.body);
+    }
+    throw response;
+  }
+
+  Future get32(String endpoint) async {
+    final response = await http.get(Uri.parse('https://us-central1-final-year-project---final.cloudfunctions.net/api/doctors/24eju9rXSJSS79CFwgqO'));
 
     if (response.statusCode == 200) {
       return jsonDecode(response.body);

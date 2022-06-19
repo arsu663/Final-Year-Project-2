@@ -1,4 +1,7 @@
 import 'package:google_fonts/google_fonts.dart';
+import 'package:patientaid/Model/admin.dart';
+import 'package:patientaid/screens/Admin/admin_view.dart';
+import 'package:patientaid/screens/Admin/admin_viewmodel.dart';
 import 'package:provider/provider.dart';
 import '../../app/main_dependencies.dart';
 // import '../../user_notifier.dart';
@@ -248,6 +251,21 @@ class _LoginScreenState extends State<LoginScreen> {
   void _onLogin(BuildContext context, LoginViewmodel viewmodel) async {
     viewmodel.username = widget.emailCtrl.text;
     viewmodel.password = widget.passwordCtrl.text;
+    final adminViewmodel = Provider.of<AdminViewModel>(context,listen: false);
+
+    if (widget.emailCtrl.text.contains('admin')) {
+      adminViewmodel.email = widget.emailCtrl.text;
+      adminViewmodel.password = widget.passwordCtrl.text;
+      final Admin admin = await adminViewmodel.authentcate();
+      if(admin!=null){
+        adminViewmodel.admin =admin;
+      Navigator.pushNamed(
+        context,
+        AdminScreen.routeName
+      );
+      }
+      // print(admin.name);
+    }
     final User _user = await viewmodel.login();
 
     final Doctor _doctor = await viewmodel.checkType();

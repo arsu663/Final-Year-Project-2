@@ -244,7 +244,8 @@ class _AppointemntsSectionState extends State<AppointemntsSection> {
             selectedAppointment.hospitalName =
                 dependency<HospitalListViewmodel>().hospital.hospitalName;
             selectedAppointment.doctorid = widget.viewmodel.doctor.id;
-            widget.viewmodel.addAppoinmtent(selectedAppointment);
+            widget.viewmodel.addAppoinmtent(
+                selectedAppointment, widget.viewmodel.doctor.name);
             Navigator.push(
                 context,
                 MaterialPageRoute(

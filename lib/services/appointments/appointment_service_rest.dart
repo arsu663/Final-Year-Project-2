@@ -1,14 +1,18 @@
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:patientaid/Model/Appointment.dart';
+import 'package:patientaid/Model/Parient.dart';
 import 'package:patientaid/app/dependencies.dart';
+import 'package:patientaid/app/main_dependencies.dart';
 import 'package:patientaid/services/appointments/appointment_service.dart';
+import 'package:patientaid/Model/user.dart';
 import 'package:patientaid/services/rest.dart';
 
 class AppointmentServiceRest implements AppointmentService {
   RestService get rest => dependency();
 
-  Future<List<Appointment>> getUserTodoList(userId, user) async {
+  Future<List<Appointment>> getUserTodoList(userId, user, index) async {
 // var  appointments;
-    if (user != null) {
+    if (index == 0) {
       final List appointments = await rest.get("Appointments?userId=$userId");
       if (appointments.length == 0) return null;
 

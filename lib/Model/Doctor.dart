@@ -19,6 +19,8 @@ class Doctor implements AbstractUser {
   String internship;
   String fellowship;
   String biography;
+  bool availability;
+
   Doctor(
       this.id,
       this.hospitalId,
@@ -37,7 +39,8 @@ class Doctor implements AbstractUser {
       this.residency,
       this.internship,
       this.fellowship,
-      this.biography);
+      this.biography,this.availability
+      );
 
   Doctor.copy(Doctor from)
       : this(
@@ -58,7 +61,8 @@ class Doctor implements AbstractUser {
             from.residency,
             from.internship,
             from.fellowship,
-            from.biography);
+            from.biography,
+            from.availability);
 
   Doctor.fromJson(Map<String, dynamic> json)
       : this(
@@ -79,7 +83,8 @@ class Doctor implements AbstractUser {
             json['residency'],
             json['internship'],
             json['fellowship'],
-            json['biography']);
+            json['biography'],
+            json['availability']);
 
   Map<String, dynamic> toJson() => {
         'id': id,
@@ -99,6 +104,7 @@ class Doctor implements AbstractUser {
         'residency': residency,
         'internship': internship,
         'fellowship': fellowship,
-        'biography': biography
+        'biography': biography,
+        'availability':availability
       };
 }

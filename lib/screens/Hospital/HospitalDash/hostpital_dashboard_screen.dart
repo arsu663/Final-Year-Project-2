@@ -38,8 +38,10 @@ class _HospitaldashboardState extends State<Hospitaldashboard> {
             doctorViewmodel.busy ? 0 : doctorViewmodel.doctors.length,
         // doctorViewmodel.busy ? 0 : doctorViewmodel.doctors,
         builder: (context, doctorViewmodel, ___) {
-          final doctors = doctorViewmodel.doctors;
-
+          List<Doctor> tempdoctors = doctorViewmodel.doctors;
+          // final doctors = doctorViewmodel.doctors;
+          final doctors =
+              tempdoctors.where((e) => e.availability == true).toList();
           return Scaffold(
             appBar: _buildAppBar(),
             body: SingleChildScrollView(

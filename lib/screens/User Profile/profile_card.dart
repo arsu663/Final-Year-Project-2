@@ -65,14 +65,19 @@ class _ProfileCardState extends State<ProfileCard> {
             mainAxisSize: MainAxisSize.min,
             children: [
               Container(
-                child: ProfilePicture(imagePath: widget.user.photo),
+                child: ProfilePicture(
+                    imagePath: widget.user != null
+                        ? widget.user.photo
+                        : 'assets/unkown.jpg'),
               ),
               (widget.user != null)
                   ? UserInfo(name: widget.user.name, specialty: "")
-                  : UserInfo(
-                      name: widget.dr.name, specialty: widget.dr.specialty),
-               (widget.dr != null)
-                 ? BiographySection(
+                  : (widget.dr != null)
+                      ? UserInfo(
+                          name: widget.dr.name, specialty: widget.dr.specialty)
+                      : Text(''),
+              (widget.dr != null)
+                  ? BiographySection(
                       biography: widget.dr.biography,
                       edit: true,
                       onPressed: () => _navigate(),

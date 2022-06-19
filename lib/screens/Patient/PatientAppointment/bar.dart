@@ -7,14 +7,8 @@ class Bar extends StatelessWidget implements PreferredSizeWidget {
   Widget build(BuildContext context) {
     Color _color = Colors.brown[200];
     return AppBar(
+      automaticallyImplyLeading: false,
       backgroundColor: _color,
-      leading: IconButton(
-        icon: Icon(Icons.arrow_back),
-        color: Colors.white,
-        onPressed: () {
-          Navigator.pop(context, null);
-        },
-      ),
       title: Center(
         child: Text(
           "Appointments",

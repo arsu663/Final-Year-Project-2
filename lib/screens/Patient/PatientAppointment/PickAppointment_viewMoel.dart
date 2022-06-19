@@ -24,9 +24,9 @@ class AppointmentViewmdeol extends Viewmodel {
     if (user == null && dr == null) return null;
     turnBusy();
     if (dr == null) {
-      _appointments = await service.getUserTodoList(user.id, user);
+      _appointments = await service.getUserTodoList(user.id, user,0);
     } else {
-      _appointments = await service.getUserTodoList(dr.id, user);
+      _appointments = await service.getUserTodoList(dr.id, user,1);
       _user = null;
     }
     turnIdle();

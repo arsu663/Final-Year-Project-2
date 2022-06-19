@@ -172,9 +172,10 @@ class _DoctorCardState extends State<DoctorCard> {
                   SectionTitle(title: "Appointments"),
 
                   ElevatedButton(
-                     style: ButtonStyle(
-                       backgroundColor: MaterialStateProperty.all<Color>(Colors.brown),
-                     ),
+                    style: ButtonStyle(
+                      backgroundColor:
+                          MaterialStateProperty.all<Color>(Colors.brown),
+                    ),
                     onPressed: () {
                       DatePicker.showDateTimePicker(
                         context,
@@ -277,7 +278,9 @@ class _DoctorCardState extends State<DoctorCard> {
                                               padding: EdgeInsets.only(
                                                   left: 30.0, right: 30.0),
                                               child: Text(
-                                                'Time : ${selectedAppointment.day.hour}:${selectedAppointment.day.minute}${selectedAppointment.day.second}',
+                                                // 'Time : ${(widget.apps[index].day.hour >= 10) ? widget.apps[index].day.hour : '0' + '${widget.apps[index].day.hour}'} :${(widget.apps[index].day.minute >= 10) ? widget.apps[index].day.minute : '0' + '${widget.apps[index].day.minute}'} ',
+
+                                                'Time : ${(selectedAppointment.day.hour >= 10) ? selectedAppointment.day.hour : '0' + '${selectedAppointment.day.hour}'}:${(selectedAppointment.day.minute >= 10) ? selectedAppointment.day.minute : '0' + "${selectedAppointment.day.minute}"}',
                                                 style: TextStyle(
                                                   color: Colors.brown
                                                       .withOpacity(1),
@@ -298,7 +301,9 @@ class _DoctorCardState extends State<DoctorCard> {
                                             ElevatedButton(
                                               onPressed: () => {
                                                 setState(
-                                                  () {},
+                                                  () {
+                                                    Navigator.of(context).pop();
+                                                  },
                                                 ),
                                               },
                                               style: ButtonStyle(
@@ -328,16 +333,17 @@ class _DoctorCardState extends State<DoctorCard> {
                                               //   ),
                                               // ),
                                               onPressed: () => {
-                                                main(),
+                                                // main(),
                                                 widget.viewmodel.addAppoinmtent(
-                                                    selectedAppointment),
-                                                Navigator.push(
+                                                    selectedAppointment,widget.viewmodel.doctor),
+                                                Navigator.pushAndRemoveUntil(
                                                   context,
                                                   MaterialPageRoute(
                                                     builder: (context) =>
                                                         PatientAppointmentScreen(
                                                             0),
                                                   ),
+                                                  (route) => false,
                                                 ),
                                               },
                                               child: Row(
@@ -377,14 +383,14 @@ class _DoctorCardState extends State<DoctorCard> {
                       );
                     },
                     child: Container(
-                      width: width-80,
+                      width: width - 80,
                       height: 80,
                       decoration: BoxDecoration(
-                        // color: Colors.brown[600],
+                          // color: Colors.brown[600],
 
-                        // borderRadius: BorderRadius.circular(30.0),
-                        //border: Border.all(color: _color),
-                      ),
+                          // borderRadius: BorderRadius.circular(30.0),
+                          //border: Border.all(color: _color),
+                          ),
                       child: Center(
                         child: Text(
                           "Pick Your Appointment",
@@ -402,20 +408,4 @@ class _DoctorCardState extends State<DoctorCard> {
     );
   }
 
-  main() async {
-    String username = "abdallahodda332@gmail.com";
-    String password = "b@Dy771999";
-
-    final smtpServer = gmail(username, password);
-    // Creating the Gmail server
-
-    // Create our email message.
-    final message = Message()
-      ..from = Address(username)
-      ..recipients.add(widget.viewmodel.user.email) //recipent email
-      ..ccRecipients.addAll(
-          ['destCc1@example.com', 'destCc2@example.com']) //cc Recipents emails
-      ..bccRecipients.add(Address('bccAddress@example.com'))
-      ..from = "body"; //bcc Recipents email
-  }
 }

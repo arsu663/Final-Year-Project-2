@@ -17,6 +17,9 @@ class _ProfileScreenState extends State<ProfileScreen> {
 
           dr = profileViewmodel.dr;
           user = profileViewmodel.user;
+
+          // print(dr);
+          // print(user);
           return Scaffold(
             backgroundColor: Colors.brown[200],
             appBar: AppBar(

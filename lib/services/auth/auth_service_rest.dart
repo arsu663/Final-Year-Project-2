@@ -11,9 +11,9 @@ class AuthServiceRest implements AuthService {
     return _user;
   }
 
-  Future<User> addUser(user) async {
-    await rest.post("users", data: user);
-    print("done");
+  Future<void> addUser(user) async {
+    await rest.post('users', data: user);
+    print("User Added");
   }
 
   Future<User> updateUser(user) async {
@@ -23,11 +23,19 @@ class AuthServiceRest implements AuthService {
   }
 
   Future<Doctor> authenticateDctor({String login, String password}) async {
-    final json = await rest.get('doctors?name=$login&&password=$password');
+    final json = await rest.get('doctors?email=$login&&password=$password');
     if (json == null || json.length == 0) return null;
 
     final _dr = Doctor.fromJson(json[0]);
     return _dr;
+  }
+
+  Future<Doctor> authenticateDoctor({String login, String password}) async {
+    final json = await rest.get('doctors?email=$login&&password=$password');
+    if (json == null || json.length == 0) return null;
+
+    final doctor = Doctor.fromJson(json[0]);
+    return doctor;
   }
 
   Future<String> checkUserType({String login, String password}) {

@@ -39,7 +39,7 @@ class User implements AbstractUser {
   User({
     dynamic id,
     String name = '',
-    String photoUrl = 'assets/mathew.png',
+    String photoUrl = 'assets/unkown.jpg',
     String login = '',
     String password = '',
     String email = "",
@@ -82,7 +82,7 @@ class User implements AbstractUser {
         );
 
   Map<String, dynamic> toJson() => {
-        'id': id,
+        // 'id': id,
         'name': name,
         'login': login,
         'password': password,

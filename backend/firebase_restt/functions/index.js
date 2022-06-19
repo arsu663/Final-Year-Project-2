@@ -7,7 +7,7 @@ const doctorsRouter = require('./api/controllers/doctor_controller');
 const appointmentsRouter = require('./api/controllers/appointment_controller');
 const hospitalsRouter = require('./api/controllers/hospital_controller');
 // const countersRouter = require('./api/controllers/counters_controller')
-
+const adminsRouter =  require('./api/controllers/admin_controller')
 const {authsRouter} = require('./api/controllers/auths_controller');
 
 app.use(express.json());
@@ -17,6 +17,7 @@ app.use('/users', usersRouter);
 app.use('/doctors', doctorsRouter);
 app.use('/Appointments', appointmentsRouter);
 app.use('/hospitals', hospitalsRouter);
+app.use('/admins',adminsRouter);
 // app.use('/counters', verifyAccessToken, countersRouter)
 
 

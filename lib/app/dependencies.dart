@@ -14,7 +14,7 @@ import '../app/main_dependencies.dart';
 import 'package:get_it/get_it.dart';
 
 //Variable to hold the instance
-GetIt  dependency = GetIt.instance;
+GetIt dependency = GetIt.instance;
 
 void init() {
   //services
@@ -28,15 +28,17 @@ void init() {
     ),
   );
 
+  https://us-central1-final-year-project---final.cloudfunctions.net/api/doctors/24eju9rXSJSS79CFwgqO
+
   //done
 
   //viewmodel
 
   //what type of dependency that we are gonna call
   dependency.registerLazySingleton(() => FirebaseService());
-  dependency
-      .registerLazySingleton<AuthService>(() => UserAuthServiceFirebase());
-  // dependency.registerLazySingleton<AuthService>(() => AuthServiceRest());
+  // dependency
+  //     .registerLazySingleton<AuthService>(() => UserAuthServiceFirebase());
+  dependency.registerLazySingleton<AuthService>(() => AuthServiceRest());
   dependency.registerLazySingleton<AppointmentService>(
       () => AppointmentServiceRest());
   dependency

@@ -34,21 +34,27 @@ class _SideDrawerState extends State<SideDrawer> {
             //   accountEmail: null,
             // ),
             ListTile(
-              iconColor: Colors.white,
-              // tileColor: Colors.white,
-              textColor: Colors.white,
+                iconColor: Colors.white,
+                // tileColor: Colors.white,
+                textColor: Colors.white,
                 dense: true,
                 leading: Icon(Mdi.faceProfile, size: 40),
-                title: Text("Profile", style: TextStyle(fontSize: 16),),
+                title: Text(
+                  "Profile",
+                  style: TextStyle(fontSize: 16),
+                ),
                 subtitle: Text("Edit Profile"),
                 onTap: () {}),
             ListTile(
-               iconColor: Colors.white,
-              // tileColor: Colors.white,
-              textColor: Colors.white,
+                iconColor: Colors.white,
+                // tileColor: Colors.white,
+                textColor: Colors.white,
                 dense: true,
                 leading: Icon(Mdi.phoneSettings, size: 30),
-                title: Text("Contact Us",style: TextStyle(fontSize: 16),),
+                title: Text(
+                  "Contact Us",
+                  style: TextStyle(fontSize: 16),
+                ),
                 subtitle: Text("Contact Info"),
                 onTap: () => Navigator.pushNamed(context, "/contactUs")),
             // ListTile(
@@ -63,40 +69,45 @@ class _SideDrawerState extends State<SideDrawer> {
             //               builder: (context) => Trackingscreen()));
             //     }),
             ListTile(
-               iconColor: Colors.white,
+              iconColor: Colors.white,
               // tileColor: Colors.white,
               textColor: Colors.white,
               dense: true,
               leading: Icon(Icons.settings, size: 30),
-              title: Text("App Settings",style: TextStyle(fontSize: 16),),
+              title: Text(
+                "App Settings",
+                style: TextStyle(fontSize: 16),
+              ),
               subtitle: Text("Change App Settings"),
               onTap: () {},
             ),
             ListTile(
-               iconColor: Colors.white,
-              // tileColor: Colors.white,
-              textColor: Colors.white,
+                iconColor: Colors.white,
+                // tileColor: Colors.white,
+                textColor: Colors.white,
                 dense: true,
                 leading: Icon(Icons.info_outline, size: 30),
-                title: Text("About us",style: TextStyle(fontSize: 16),),
-                onTap: () => Navigator.pushNamed(context, "/aboutUs")),
+                title: Text(
+                  "About us",
+                  style: TextStyle(fontSize: 16),
+                ),
+                onTap: () => Navigator.pushNamed(context, "/AboutUs")),
             ListTile(
-               iconColor: Colors.white,
-              // tileColor: Colors.white,
-              textColor: Colors.white,
-              dense: true,
-              leading: Icon(Icons.logout, size: 30),
-              title: Text("Log Out"),
-              onTap: () {
-              //  final provider =
-              //      Provider.of<GoogleSignInProvider>(context, listen: false);
-              //  provider.logout();
-              dependency<LoginViewmodel>().user =null;
-              dependency<LoginViewmodel>().dr =null;
-               Navigator.push(context,
-                   MaterialPageRoute(builder: (context) => LoginScreen()));
-              }
-            ),
+                iconColor: Colors.white,
+                // tileColor: Colors.white,
+                textColor: Colors.white,
+                dense: true,
+                leading: Icon(Icons.logout, size: 30),
+                title: Text("Log Out"),
+                onTap: () {
+                  //  final provider =
+                  //      Provider.of<GoogleSignInProvider>(context, listen: false);
+                  //  provider.logout();
+                  dependency<LoginViewmodel>().user = null;
+                  dependency<LoginViewmodel>().dr = null;
+                  Navigator.pushNamedAndRemoveUntil(
+                      context, '/login_view', (route) => false);
+                }),
           ],
         ),
       ),
