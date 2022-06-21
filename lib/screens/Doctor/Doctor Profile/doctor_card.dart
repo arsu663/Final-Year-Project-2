@@ -319,7 +319,7 @@ class _DoctorCardState extends State<DoctorCard> {
                                                         .spaceBetween,
                                                 children: <Widget>[
                                                   Icon(Icons.clear),
-                                                  Text("Disapprove"),
+                                                  Text("Cancel"),
                                                 ],
                                               ),
                                             ),
@@ -335,7 +335,8 @@ class _DoctorCardState extends State<DoctorCard> {
                                               onPressed: () => {
                                                 // main(),
                                                 widget.viewmodel.addAppoinmtent(
-                                                    selectedAppointment,widget.viewmodel.doctor),
+                                                    selectedAppointment,
+                                                    widget.viewmodel.doctor),
                                                 Navigator.pushAndRemoveUntil(
                                                   context,
                                                   MaterialPageRoute(
@@ -407,5 +408,4 @@ class _DoctorCardState extends State<DoctorCard> {
       ],
     );
   }
-
 }

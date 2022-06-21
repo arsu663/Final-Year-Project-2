@@ -33,18 +33,18 @@ class _SideDrawerState extends State<SideDrawer> {
             //   accountName: null,
             //   accountEmail: null,
             // ),
-            ListTile(
-                iconColor: Colors.white,
-                // tileColor: Colors.white,
-                textColor: Colors.white,
-                dense: true,
-                leading: Icon(Mdi.faceProfile, size: 40),
-                title: Text(
-                  "Profile",
-                  style: TextStyle(fontSize: 16),
-                ),
-                subtitle: Text("Edit Profile"),
-                onTap: () {}),
+            // ListTile(
+            //     iconColor: Colors.white,
+            //     // tileColor: Colors.white,
+            //     textColor: Colors.white,
+            //     dense: true,
+            //     leading: Icon(Mdi.faceProfile, size: 40),
+            //     title: Text(
+            //       "Profile",
+            //       style: TextStyle(fontSize: 16),
+            //     ),
+            //     subtitle: Text("Edit Profile"),
+            //     onTap: () {}),
             ListTile(
                 iconColor: Colors.white,
                 // tileColor: Colors.white,
@@ -68,19 +68,19 @@ class _SideDrawerState extends State<SideDrawer> {
             //           MaterialPageRoute(
             //               builder: (context) => Trackingscreen()));
             //     }),
-            ListTile(
-              iconColor: Colors.white,
-              // tileColor: Colors.white,
-              textColor: Colors.white,
-              dense: true,
-              leading: Icon(Icons.settings, size: 30),
-              title: Text(
-                "App Settings",
-                style: TextStyle(fontSize: 16),
-              ),
-              subtitle: Text("Change App Settings"),
-              onTap: () {},
-            ),
+            // ListTile(
+            //   iconColor: Colors.white,
+            //   // tileColor: Colors.white,
+            //   textColor: Colors.white,
+            //   dense: true,
+            //   leading: Icon(Icons.settings, size: 30),
+            //   title: Text(
+            //     "App Settings",
+            //     style: TextStyle(fontSize: 16),
+            //   ),
+            //   subtitle: Text("Change App Settings"),
+            //   onTap: () {},
+            // ),
             ListTile(
                 iconColor: Colors.white,
                 // tileColor: Colors.white,

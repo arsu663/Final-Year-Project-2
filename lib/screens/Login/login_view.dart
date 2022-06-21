@@ -24,7 +24,7 @@ class _LoginScreenState extends State<LoginScreen> {
   Color _color = Colors.brown[500];
   double height, width;
   bool isFullScreen(Size currentSize, Size fullSize) {
-    print("$fullSize == $currentSize");
+    // print("$fullSize == $currentSize");
 
     if (currentSize.height == fullSize.height &&
         fullSize.width == currentSize.width)

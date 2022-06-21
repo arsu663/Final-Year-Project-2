@@ -13,7 +13,7 @@ class AddDoctor extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Colors.brown[200],
-        title: Text('Select New Doctor\'s Hospital'),
+        title: Text('Select New Doctor\'s Clinic'),
         centerTitle: true,
       ),
       body: SafeArea(

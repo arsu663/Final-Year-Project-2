@@ -35,8 +35,10 @@ class EditDoctor extends StatelessWidget {
         child: Container(
             padding: const EdgeInsets.all(15),
             child: Card(
+              // color: Colors.brown[500],
               shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(15)),
+                borderRadius: BorderRadius.circular(15),
+              ),
               child: Padding(
                 padding: const EdgeInsets.all(8.0),
                 child: Column(
@@ -44,20 +46,28 @@ class EditDoctor extends StatelessWidget {
                     Padding(
                       padding: const EdgeInsets.all(20.0),
                       child: Text(
-                        'Edit ${doctor.name}:',
+                        'Edit Dr. ${doctor.name}\'s Profile',
                         style: TextStyle(
-                            fontWeight: FontWeight.bold,
-                            fontSize: 21,
-                            decoration: TextDecoration.combine([
-                              TextDecoration.underline,
-                              TextDecoration.underline
-                            ])),
+                          color: Colors.brown,
+                          fontFamily: 'Raleway',
+                          fontWeight: FontWeight.bold,
+                          fontSize: 21,
+                          // decoration: TextDecoration.combine(
+                          //   [
+                          //     // TextDecoration.underline,
+                          //     // TextDecoration.underline
+                          //   ],
+                          // ),
+                        ),
                       ),
                     ),
                     Text(
                       'Fullname :',
-                      style:
-                          TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
+                      style: TextStyle(
+                        fontSize: 16,
+                        fontWeight: FontWeight.bold,
+                        color: Colors.brown,
+                      ),
                     ),
                     AdminInput(
                         hintTitle: doctor.name,
@@ -66,8 +76,11 @@ class EditDoctor extends StatelessWidget {
                         password: false),
                     Text(
                       'Email:',
-                      style:
-                          TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
+                      style: TextStyle(
+                        fontSize: 16,
+                        fontWeight: FontWeight.bold,
+                        color: Colors.brown,
+                      ),
                     ),
                     AdminInput(
                         hintTitle: doctor.email,
@@ -76,8 +89,11 @@ class EditDoctor extends StatelessWidget {
                         password: false),
                     Text(
                       'Gender:',
-                      style:
-                          TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
+                      style: TextStyle(
+                        fontSize: 16,
+                        fontWeight: FontWeight.bold,
+                        color: Colors.brown,
+                      ),
                     ),
                     AdminInput(
                         hintTitle: doctor.gender,
@@ -86,8 +102,11 @@ class EditDoctor extends StatelessWidget {
                         password: false),
                     Text(
                       'Biography:',
-                      style:
-                          TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
+                      style: TextStyle(
+                        fontSize: 16,
+                        fontWeight: FontWeight.bold,
+                        color: Colors.brown,
+                      ),
                     ),
                     AdminInput(
                         hintTitle: doctor.biography,
@@ -96,8 +115,11 @@ class EditDoctor extends StatelessWidget {
                         password: false),
                     Text(
                       'Internship:',
-                      style:
-                          TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
+                      style: TextStyle(
+                        fontSize: 16,
+                        fontWeight: FontWeight.bold,
+                        color: Colors.brown,
+                      ),
                     ),
                     AdminInput(
                         hintTitle: doctor.internship,
@@ -106,8 +128,11 @@ class EditDoctor extends StatelessWidget {
                         password: false),
                     Text(
                       'Medical Education:',
-                      style:
-                          TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
+                      style: TextStyle(
+                        fontSize: 16,
+                        fontWeight: FontWeight.bold,
+                        color: Colors.brown,
+                      ),
                     ),
                     AdminInput(
                         hintTitle: doctor.medicalEducation,
@@ -116,8 +141,11 @@ class EditDoctor extends StatelessWidget {
                         password: false),
                     Text(
                       'Password:',
-                      style:
-                          TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
+                      style: TextStyle(
+                        fontSize: 16,
+                        fontWeight: FontWeight.bold,
+                        color: Colors.brown,
+                      ),
                     ),
                     AdminInput(
                         hintTitle: doctor.password,
@@ -126,8 +154,11 @@ class EditDoctor extends StatelessWidget {
                         password: true),
                     Text(
                       'Fellowship:',
-                      style:
-                          TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
+                      style: TextStyle(
+                        fontSize: 16,
+                        fontWeight: FontWeight.bold,
+                        color: Colors.brown,
+                      ),
                     ),
                     AdminInput(
                         hintTitle: doctor.fellowship,
@@ -136,8 +167,11 @@ class EditDoctor extends StatelessWidget {
                         password: false),
                     Text(
                       'Residency:',
-                      style:
-                          TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
+                      style: TextStyle(
+                        fontSize: 16,
+                        fontWeight: FontWeight.bold,
+                        color: Colors.brown,
+                      ),
                     ),
                     AdminInput(
                         hintTitle: doctor.residency,
@@ -146,8 +180,11 @@ class EditDoctor extends StatelessWidget {
                         password: false),
                     Text(
                       'Specialty:',
-                      style:
-                          TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
+                      style: TextStyle(
+                        fontSize: 16,
+                        fontWeight: FontWeight.bold,
+                        color: Colors.brown,
+                      ),
                     ),
                     AdminInput(
                         hintTitle: doctor.specialty,
@@ -166,16 +203,21 @@ class EditDoctor extends StatelessWidget {
                                     AdminScreen.routeName, (route) => false);
                               },
                               style: ElevatedButton.styleFrom(
-                                  primary: Colors.red, shadowColor: Colors.red),
+                                primary: Colors.red,
+                                shadowColor: Colors.red,
+                                padding: EdgeInsets.all(15),
+                              ),
                               child: Text(
-                                'Delete ${doctor.name} !',
+                                'Delete ${doctor.name}',
                                 style: TextStyle(fontSize: 12),
                               )),
                         ),
                         Consumer<AdminViewModel>(
                           builder: (context, viewmodel, _) => ElevatedButton(
                               style: ElevatedButton.styleFrom(
-                                  primary: Colors.green),
+                                primary: Colors.green,
+                                padding: EdgeInsets.all(15),
+                              ),
                               onPressed: () async {
                                 viewmodel.addUpdatedIndex(
                                     "biography", bio.text);
@@ -203,7 +245,7 @@ class EditDoctor extends StatelessWidget {
                                     AdminScreen.routeName, (route) => false);
                               },
                               child: Text(
-                                'Update ${doctor.name} !',
+                                'Update ${doctor.name}',
                                 style: TextStyle(fontSize: 12),
                               )),
                         ),

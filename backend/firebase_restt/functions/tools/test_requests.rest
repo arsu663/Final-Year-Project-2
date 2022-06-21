@@ -127,8 +127,8 @@ Content-Type: application/json
 
 {   
             "latitude": "",
-            "hospitalName": "Mujaddadi Hospital 2",
-            "description": "Good Hospital 1",
+            "hospitalName": "Mohmand Clinic 3",
+            "description": "Located in south part Kandahar",
             "hospitalId": 3,
             "location": "Kandahar",
             "longitude": "",

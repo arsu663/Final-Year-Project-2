@@ -60,8 +60,9 @@ class DoctorDashCategory extends StatelessWidget {
               ),
               Text(
                 subTitle,
+                textAlign: TextAlign.center,
                 style: TextStyle(
-                  color: Colors.grey[400],
+                  color: Colors.black54,
                   fontSize: 15,
                 ),
               )

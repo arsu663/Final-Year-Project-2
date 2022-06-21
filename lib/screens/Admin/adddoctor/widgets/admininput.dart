@@ -20,12 +20,10 @@ class AdminInput extends StatelessWidget {
       height: 55,
       margin: const EdgeInsets.only(bottom: 15),
       decoration: BoxDecoration(
-          color: Colors.blueGrey.shade200,
-          borderRadius: BorderRadius.circular(30)),
+          color: Colors.brown[100], borderRadius: BorderRadius.circular(10)),
       child: Padding(
         padding: const EdgeInsets.only(left: 25.0, top: 15, right: 25),
         child: TextField(
-          
           obscureText: password,
           controller: adminInput,
           autocorrect: false,

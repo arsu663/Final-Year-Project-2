@@ -4,8 +4,6 @@ import 'package:patientaid/screens/Admin/admin_view.dart';
 import 'package:patientaid/screens/Admin/editdoctor/editdoctor_view.dart';
 import 'package:patientaid/screens/Doctor/DoctorDashboard/Doctor_Availblity/doctoravailability_view.dart';
 import 'package:patientaid/screens/User%20Profile/edit_profile_screen.dart';
-// import '../../screens/User%20Profile/edit_profile_screen.dart';
-// import '../../screens/User%20Profile/profile_screen.dart';
 
 import 'main_dependencies.dart';
 
@@ -31,8 +29,8 @@ Route<dynamic> createRoute(RouteSettings settings) {
     case EditDoctor.routeName:
       return MaterialPageRoute(
           builder: (context) => EditDoctor(), settings: settings);
-     case AddDoctor.routeName:
-     case AddDoctor.routeName:
+    case AddDoctor.routeName:
+    case AddDoctor.routeName:
       return MaterialPageRoute(
           builder: (context) => AddDoctor(), settings: settings);
     case AddDoctor2.routeName:
@@ -47,14 +45,6 @@ Route<dynamic> createRoute(RouteSettings settings) {
               user: (settings.arguments as EditProfileScreen).user,
               dr: (settings.arguments as EditProfileScreen).dr),
           settings: settings);
-    // {
-    //   EditProfileScreen args = settings.arguments;
-    //   return EditProfileScreen(
-    //       user :args.user,dr:args.dr
-    //     );
-    //     }
-
-    // );
     case "/DoctorProfile":
       return MaterialPageRoute(builder: (context) => DoctorProfile());
     case "/DoctorDashboardScreen":
@@ -63,19 +53,10 @@ Route<dynamic> createRoute(RouteSettings settings) {
       return MaterialPageRoute(builder: (context) => PatientDashboardScreen());
     case "/welcome_Screen":
       return MaterialPageRoute(builder: (context) => WelcomePage());
-    // case "/appointment":
-    //   return MaterialPageRoute(builder: (context) => DoctorPickAppointment());
-    // case "/pickAppointments":
-    //   return MaterialPageRoute(builder: (context) => DoctorPickAppointment());
     case "/categories_Screen":
       return MaterialPageRoute(builder: (context) => CategoriesScreen());
     case "/hospital_view_screen":
       return MaterialPageRoute(builder: (context) => HospitalListViewScreen());
-    // case "/nearby_hospital":
-    //   return MaterialPageRoute(builder: (context) => HospitalMap());
-    // case "/hospital_details_screen":
-    //   return MaterialPageRoute(
-    //       builder: (context) => HospitalDetailScreen());
     case "/feedback_screen":
       return MaterialPageRoute(builder: (context) => FeedbackScreen());
     case "/Trackingscreen":
@@ -87,9 +68,5 @@ Route<dynamic> createRoute(RouteSettings settings) {
       return MaterialPageRoute(builder: (context) => AboutUs());
     case "/contactUs":
       return MaterialPageRoute(builder: (context) => ContactUs());
-    case "/doctor_calender":
-      return MaterialPageRoute(builder: (context) => DoctorCalender());
-    case "/event_editing":
-      return MaterialPageRoute(builder: (context) => EventEditing());
   }
 }

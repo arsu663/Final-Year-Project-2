@@ -1050,7 +1050,7 @@ class _EditBiographySectionState extends State<EditBiographySection> {
                   border: InputBorder.none,
                   hintMaxLines: 8,
                   hintStyle: TextStyle(
-                    color: Color(0xFF9f9f9f),
+                    color: Colors.white,
                   ),
                   isCollapsed: true,
                 ),
@@ -1091,7 +1091,7 @@ class BiographySection extends StatelessWidget {
             child: Text(
               biography,
               style: TextStyle(
-                color: Color(0xFF9f9f9f),
+                color: Colors.white,
               ),
             ),
           ),

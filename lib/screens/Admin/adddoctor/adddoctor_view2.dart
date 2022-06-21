@@ -143,6 +143,12 @@ class AddDoctor2 extends StatelessWidget {
                         password: false),
                     Consumer<AdminViewModel>(
                       builder: (context, viewmodel, _) => ElevatedButton(
+                        style: ElevatedButton.styleFrom(
+                            primary: Colors.brown[400],
+                            
+                            padding: const EdgeInsets.symmetric(horizontal: 50, vertical: 20),
+                            textStyle: TextStyle(fontSize: 20, fontWeight: FontWeight.bold)
+                          ),
                           onPressed: () async {
                             if (fullname.text.isNotEmpty &&
                                 email.text.isNotEmpty &&
@@ -186,3 +192,19 @@ class AddDoctor2 extends StatelessWidget {
     );
   }
 }
+
+  // Container(
+  //                       margin: EdgeInsets.only(bottom: 20),
+  //                       child: ElevatedButton.icon(
+  //                         style: ElevatedButton.styleFrom(
+  //                           primary: Colors.brown[700],
+                            
+  //                           padding: const EdgeInsets.symmetric(horizontal: 50, vertical: 20),
+  //                           textStyle: TextStyle(fontSize: 20, fontWeight: FontWeight.bold)
+  //                         ),
+  //                         onPressed: () =>
+  //                             Navigator.pushNamed(context, AddDoctor.routeName),
+  //                         icon: Icon(Icons.add, size: 24,),
+  //                         label: Text('Add New Doctor'),
+  //                       ),
+  //                     )

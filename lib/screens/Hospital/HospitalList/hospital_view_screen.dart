@@ -36,7 +36,7 @@ class _HospitalListViewScreenState extends State<HospitalListViewScreen> {
           backgroundColor: Colors.brown[600],
           centerTitle: true,
           title: Text(
-            "Hospitals List",
+            "Clinics",
             style: GoogleFonts.lato(
               textStyle: Theme.of(context).textTheme.headline4,
               fontSize: 22,

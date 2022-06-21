@@ -22,65 +22,100 @@ class AdminScreen extends StatelessWidget {
         ),
         backgroundColor: Colors.brown[200],
         title: Column(children: [
-          Text('Hello ${admin.name}', style: TextStyle(fontSize: 20)),
-          Text('Manage Doctors', style: TextStyle(fontSize: 12)),
+          Text(
+            'Hello, ${admin.name}',
+            style: TextStyle(
+              fontSize: 20,
+            ),
+          ),
+          Text(
+            'Manage Doctors',
+            style: TextStyle(
+              fontSize: 15,
+            ),
+          ),
         ]),
         centerTitle: true,
       ),
       body: FutureBuilder(
-          future: viewmodel.getDoctors(),
-          builder: (context, snapshot) {
-            if (snapshot.connectionState == ConnectionState.waiting) {
-              return const Center(child: CircularProgressIndicator());
+        future: viewmodel.getDoctors(),
+        builder: (context, snapshot) {
+          if (snapshot.connectionState == ConnectionState.waiting) {
+            return const Center(child: CircularProgressIndicator());
+          } else {
+            if (snapshot.hasError) {
+              return const Center(child: Text('An error has occured'));
             } else {
-              if (snapshot.hasError) {
-                return const Center(child: Text('An error has occured'));
-              } else {
-                return SingleChildScrollView(
-                  child: Column(
-                    children: [
-                      Container(
-                        padding: const EdgeInsets.all(15),
-                        // alignment: Alignment.center,
-                        child: Column(
-                          // crossAxisAlignment: CrossAxisAlignment.center,
-                          children: viewmodel.doctors
-                              .map((e) => Container(
-                                    margin: const EdgeInsets.only(
-                                        right: 10, left: 10, top: 5, bottom: 5),
-                                    decoration: BoxDecoration(
-                                        color: Colors.white,
-                                        borderRadius: BorderRadius.circular(15),
-                                        border:
-                                            Border.all(color: Colors.black)),
-                                    child: ListTile(
-                                      leading: CircleAvatar(
-                                          child: Image.asset('${e.imagePath}')),
-                                      title: Text(
-                                        e.name,
-                                        textAlign: TextAlign.center,
-                                      ),
-                                      trailing: GestureDetector(
-                                          onTap: () => Navigator.of(context)
-                                              .pushNamed(EditDoctor.routeName,
-                                                  arguments: e),
-                                          child: Icon(Icons.edit)),
+              return SingleChildScrollView(
+                child: Column(
+                  children: [
+                    Container(
+                      padding: const EdgeInsets.all(15),
+                      // alignment: Alignment.center,
+                      child: Column(
+                        // crossAxisAlignment: CrossAxisAlignment.center,
+                        children: viewmodel.doctors
+                            .map((e) => Container(
+                                  margin: const EdgeInsets.only(
+                                      right: 10, left: 10, top: 5, bottom: 5),
+                                  decoration: BoxDecoration(
+                                      color: Colors.brown[100],
+                                      borderRadius: BorderRadius.circular(15),
+                                      border: Border.all(color: Colors.black)),
+                                  child: ListTile(
+                                    leading: CircleAvatar(
+                                        // radius: 30,
+                                        child: Image.asset('${e.imagePath}')),
+                                    title: Text(
+                                      e.name,
+                                      textAlign: TextAlign.center,
+                                      style: TextStyle(
+                                          color: Colors.black,
+                                          fontWeight: FontWeight.w500,
+                                          fontSize: 18,
+                                          fontFamily: 'Raleway'),
                                     ),
-                                  ))
-                              .toList(),
-                        ),
+                                    trailing: GestureDetector(
+                                        onTap: () => Navigator.of(context)
+                                            .pushNamed(EditDoctor.routeName,
+                                                arguments: e),
+                                        child: Icon(
+                                          Icons.edit,
+                                          color: Colors.black,
+                                        )),
+                                  ),
+                                ))
+                            .toList(),
                       ),
-                      ElevatedButton(
+                    ),
+                    Container(
+                      margin: EdgeInsets.only(bottom: 20),
+                      child: ElevatedButton.icon(
+                        style: ElevatedButton.styleFrom(
+                          primary: Colors.brown[700],
+                          padding: const EdgeInsets.symmetric(
+                              horizontal: 50, vertical: 20),
+                          textStyle: TextStyle(
+                            fontSize: 20,
+                            fontWeight: FontWeight.bold,
+                          ),
+                        ),
                         onPressed: () =>
                             Navigator.pushNamed(context, AddDoctor.routeName),
-                        child: Text('Add New Doctor'),
-                      )
-                    ],
-                  ),
-                );
-              }
+                        icon: Icon(
+                          Icons.add,
+                          size: 24,
+                        ),
+                        label: Text('Add New Doctor'),
+                      ),
+                    ),
+                  ],
+                ),
+              );
             }
-          }),
+          }
+        },
+      ),
     );
   }
 }
