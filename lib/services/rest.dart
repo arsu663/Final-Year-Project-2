@@ -26,19 +26,7 @@ class RestService {
     throw response;
   }
 
-//   Future get(String endpoint, {Map<String, String> headers}) async {
-//   if (headers == null) {
-//     headers = await _defaultHeaders;
-//   }
 
-//   final response =
-//       await http.get(Uri.parse('$_baseUrl/$endpoint'), headers: headers);
-
-//   if (response.statusCode == 200) {
-//     return jsonDecode(response.body);
-//   }
-//   throw response;
-// }
 
   // Send a POST request to add a new in the REST server
   Future post(String endpoint, {dynamic data}) async {

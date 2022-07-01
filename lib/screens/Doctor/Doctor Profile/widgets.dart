@@ -746,19 +746,20 @@ class _EditBasicInfoSectionStateState extends State<EditBasicInfoSection> {
                                   widget.dr.email = value;
                                 }),
                             TextField(
-                                textInputAction: TextInputAction.next,
-                                showCursor: true,
-                                decoration: InputDecoration(
-                                  counterText: widget.dr.gender,
-                                  counterStyle: TextStyle(color: Colors.black),
-                                  labelText: 'Gender:',
-                                  labelStyle: TextStyle(
-                                    color: Colors.black,
-                                  ),
+                              textInputAction: TextInputAction.next,
+                              showCursor: true,
+                              decoration: InputDecoration(
+                                counterText: widget.dr.gender,
+                                counterStyle: TextStyle(color: Colors.black),
+                                labelText: 'Gender:',
+                                labelStyle: TextStyle(
+                                  color: Colors.black,
                                 ),
-                                onChanged: (value) {
-                                  widget.dr.gender = value;
-                                }),
+                              ),
+                              onChanged: (value) {
+                                widget.dr.gender = value;
+                              },
+                            ),
                             TextField(
                                 textInputAction: TextInputAction.next,
                                 showCursor: true,
@@ -902,7 +903,7 @@ class _BasicInfoSectionState extends State<BasicInfoSection> {
                             //     title: 'First Nmae', info: widget.user.firstName),
                             // PersonalInfo(
                             //     title: 'Last Nmae', info: widget.user.lastName),
-                            PersonalInfo(title: 'Gender', info: "male"),
+                            // PersonalInfo(title: 'Gender', info: "male"),
                             PersonalInfo(
                                 title: 'Email', info: widget.user.email),
                             // PersonalInfo(
@@ -924,12 +925,12 @@ class _BasicInfoSectionState extends State<BasicInfoSection> {
                             PersonalInfo(
                                 title: 'Name', info: widget.doctor.name),
                             PersonalInfo(
-                                title: 'First Nmae',
+                                title: 'First Name',
                                 info: widget.doctor.firstName),
                             PersonalInfo(
-                                title: 'Last Nmae',
+                                title: 'Last Name',
                                 info: widget.doctor.lastName),
-                            PersonalInfo(title: 'Gender', info: "male"),
+                            // PersonalInfo(title: 'Gender', info: "male"),
                             PersonalInfo(
                                 title: 'Email', info: widget.doctor.email),
                             PersonalInfo(

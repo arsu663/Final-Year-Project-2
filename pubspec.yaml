@@ -48,14 +48,14 @@ dependencies:
   url_launcher: ^6.0.3
 flutter_native_splash:
   adaptive_icon_background: "#000000"
-  image: assets/icon.png
+  image: assets/logo.png
   smooth_star_rating: ^1.1.1
   
 
 flutter_icons:
   android: true
   ios: true
-  image_path: "assets/icon.png"
+  image_path: "assets/logo.png"
   adaptive_icon_background: "#000000"
 
 dev_dependencies:

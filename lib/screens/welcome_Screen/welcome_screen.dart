@@ -95,7 +95,7 @@ class _WelcomePageState extends State<WelcomePage>
           mainAxisSize: MainAxisSize.min,
           children: [
             Text(
-              " To PatientAid App This App is designed and developed to ease the interaction between patients and the medical field , numerous features are included in PatientAid to support the patient in his different booking processes So what are you waiting for Let's start.",
+              " Mohmand Hospital Appointment Booking mobile application is developed to ease the appointment booking process for the people of Kandahar. It also aids the doctors to utilize their time and make sure the appointment booking goes smooth  ",
               style:
                   TextStyle(color: Colors.white, fontWeight: FontWeight.bold),
               textAlign: TextAlign.center,

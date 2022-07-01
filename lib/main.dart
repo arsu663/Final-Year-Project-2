@@ -56,7 +56,7 @@ class MyApp extends StatelessWidget {
 
         debugShowCheckedModeBanner: false,
 
-        initialRoute: "/login_view",
+        initialRoute: "/splash_screen",
 
         //signup_view
 

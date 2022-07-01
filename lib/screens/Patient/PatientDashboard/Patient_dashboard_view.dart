@@ -20,12 +20,7 @@ List<PatientDashCategory> listCategory0 = [
     title: "Records",
     color: HexColor("#2A2AC0"),
   ),
-  PatientDashCategory(
-    icon: Icons.forum,
-    subTitle: "Nearby Hospitals",
-    title: "Nearby Hospitals",
-    color: HexColor("#2A2AC0"),
-  ),
+ 
   PatientDashCategory(
     icon: Icons.settings,
     subTitle: "Edit",
@@ -191,11 +186,11 @@ class _PatientDashboardScreen extends State<PatientDashboardScreen> {
                     ),
                   );
                 },
-                title: listCategory0[3].title,
-                subTitle: listCategory0[3].subTitle,
-                icon: listCategory0[3].icon,
-                color: listCategory0[3].color,
-                image: listCategory0[3].image,
+                title: listCategory0[2].title,
+                subTitle: listCategory0[2].subTitle,
+                icon: listCategory0[2].icon,
+                color: listCategory0[2].color,
+                image: listCategory0[2].image,
               ),
             ],
           ),
