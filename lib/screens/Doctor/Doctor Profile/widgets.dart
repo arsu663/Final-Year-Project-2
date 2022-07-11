@@ -764,30 +764,30 @@ class _EditBasicInfoSectionStateState extends State<EditBasicInfoSection> {
                                 textInputAction: TextInputAction.next,
                                 showCursor: true,
                                 decoration: InputDecoration(
-                                  counterText: widget.dr.prefix,
+                                  counterText: widget.dr.residency,
                                   counterStyle: TextStyle(color: Colors.black),
                                   labelText: 'Lcation:',
                                   labelStyle: TextStyle(
-                                    color: Color(0xFF9f9f9f),
+                                    color: Colors.black,
                                   ),
                                 ),
                                 onChanged: (value) {
                                   widget.dr.prefix = value;
                                 }),
-                            TextField(
-                                textInputAction: TextInputAction.next,
-                                showCursor: true,
-                                decoration: InputDecoration(
-                                  counterText: widget.dr.email,
-                                  counterStyle: TextStyle(color: Colors.black),
-                                  labelText: 'Email:',
-                                  labelStyle: TextStyle(
-                                    color: Color(0xFF9f9f9f),
-                                  ),
-                                ),
-                                onChanged: (value) {
-                                  widget.dr.email = value;
-                                }),
+                            // TextField(
+                            //     textInputAction: TextInputAction.next,
+                            //     showCursor: true,
+                            //     decoration: InputDecoration(
+                            //       counterText: widget.dr.email,
+                            //       counterStyle: TextStyle(color: Colors.black),
+                            //       labelText: 'Email:',
+                            //       labelStyle: TextStyle(
+                            //         color: Color(0xFF9f9f9f),
+                            //       ),
+                            //     ),
+                            //     onChanged: (value) {
+                            //       widget.dr.email = value;
+                            //     }),
                             TextField(
                                 textInputAction: TextInputAction.next,
                                 showCursor: true,
@@ -796,7 +796,7 @@ class _EditBasicInfoSectionStateState extends State<EditBasicInfoSection> {
                                   counterStyle: TextStyle(color: Colors.black),
                                   labelText: 'Specialty:',
                                   labelStyle: TextStyle(
-                                    color: Color(0xFF9f9f9f),
+                                    color: Colors.black,
                                   ),
                                 ),
                                 onChanged: (value) {
@@ -810,7 +810,7 @@ class _EditBasicInfoSectionStateState extends State<EditBasicInfoSection> {
                                   counterStyle: TextStyle(color: Colors.black),
                                   labelText: 'Medical Education:',
                                   labelStyle: TextStyle(
-                                    color: Color(0xFF9f9f9f),
+                                    color: Colors.black,
                                   ),
                                 ),
                                 onChanged: (value) {
@@ -824,7 +824,7 @@ class _EditBasicInfoSectionStateState extends State<EditBasicInfoSection> {
                                 counterStyle: TextStyle(color: Colors.black),
                                 labelText: 'Internship:',
                                 labelStyle: TextStyle(
-                                  color: Color(0xFF9f9f9f),
+                                  color: Colors.black,
                                 ),
                               ),
                               onChanged: (value) {
@@ -839,7 +839,7 @@ class _EditBasicInfoSectionStateState extends State<EditBasicInfoSection> {
                                 counterStyle: TextStyle(color: Colors.black),
                                 labelText: 'Fellowship:',
                                 labelStyle: TextStyle(
-                                  color: Color(0xFF9f9f9f),
+                                  color: Colors.black,
                                 ),
                               ),
                               onChanged: (value) {
@@ -1051,7 +1051,7 @@ class _EditBiographySectionState extends State<EditBiographySection> {
                   border: InputBorder.none,
                   hintMaxLines: 8,
                   hintStyle: TextStyle(
-                    color: Colors.white,
+                    color: Colors.black,
                   ),
                   isCollapsed: true,
                 ),
@@ -1092,7 +1092,7 @@ class BiographySection extends StatelessWidget {
             child: Text(
               biography,
               style: TextStyle(
-                color: Colors.white,
+                color: Colors.black,
               ),
             ),
           ),

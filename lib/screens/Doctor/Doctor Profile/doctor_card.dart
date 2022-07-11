@@ -263,7 +263,7 @@ class _DoctorCardState extends State<DoctorCard> {
                                               padding: EdgeInsets.only(
                                                   left: 30.0, right: 30.0),
                                               child: Text(
-                                                'Hospital Name : ' +
+                                                'Doctor\'s Location : ' +
                                                     selectedAppointment
                                                         .hospitalName,
                                                 style: TextStyle(
